@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function outerFunction() {
+            var a = 10;
+            var b = 20;
+            function innerFunction() {
+                var b = 30;
+                var c = 40;
+                alert(a);
+                alert(b);
+                alert(c);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

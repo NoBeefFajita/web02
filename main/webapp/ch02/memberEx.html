@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function enter() {
+            if (window.event.keyCode == 13) {
+                document.form1.submit();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="memberEx_result.jsp" method="post" name="form1" >
+        아이디&nbsp&nbsp&nbsp : <input type="text" name="id" required><br>
+        비밀번호 : <input type="password" name="pw" required><br>
+        이름&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : <input type="text" name="name" required><br>
+        이메일 &nbsp&nbsp&nbsp: <input type="email" name="email" required><br>
+        전화번호 : <input type="tel" name="tel" pattern="[0-9]{2,3}-?[0-9]{3,4}-?[0-9]{4}" required onkeyup="enter()"><br>
+        <button>확인</button>
+    </form>
+
+</body>
+
+</html>

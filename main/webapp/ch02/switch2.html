@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        var season = prompt("좋아하는 계절을 입력하세요", "봄");
+        var message = "";
+        var  img = "../images/";
+        switch(season) {
+            case "봄" :
+                message = "봄을 좋아하시는군요.";
+                 img += "spring.jpg";
+                break;
+            case "여름" :
+                message = "여름을 좋아하시는군요.";
+                 img += "summer.jpg";
+                break;
+            case "가을" :
+                message = "가을을 좋아하시는군요.";
+                 img += "fall.jpg";
+                break;
+            case "겨울" :
+                message = "겨울을 좋아하시는군요.";
+                 img += "winter.jpg";
+                break;
+            default : 
+                alert("잘못입력ㅇ 어질ㅇ");
+                break;
+        }
+
+        document.write("<h2>" + message + "</h2>");
+        imgg = document.createElement('img');
+        imgg.src = img;
+        document.body.append(imgg);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

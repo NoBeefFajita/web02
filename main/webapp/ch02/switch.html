@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        var key = today.getDay();
+        
+
+        switch (key) {
+            case 0 : 
+                yoil = "일요일";
+                break;
+            case 1 : 
+                yoil = "월요일";
+                break;
+            case 2 : 
+                yoil = "화요일";
+                break;
+            case 3 : 
+                yoil = "수요일";
+                break;
+            case 4 : 
+                yoil = "목요일";
+                break;
+            case 5 : 
+                yoil = "금요일";
+                break;
+            case 6 : 
+                yoil = "토요일";
+                break;
+        }
+
+        alert( yyyy + "년 " + mm + "월 " + dd + "일 " + yoil);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

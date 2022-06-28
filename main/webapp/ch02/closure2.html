@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello(name) {
+            var _name = name; 
+            return function() {
+                console.log('Hello, ' + _name);
+            };                                      // 익명함수는 세미콜른
+        }
+
+        var hello1 = hello('철수');
+        var hello2 = hello('영수');
+        var hello3 = hello('장근');
+
+        hello1();
+        hello2();
+        hello3();
+        
+        // 클로저는 메모리를 낭비해서 사용된 메모리의 클로저 참조를 제거해주는게 좋다.
+        hello1 = null;
+        hello2 = null;
+        hello3 = null;
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

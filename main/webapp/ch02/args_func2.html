@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function add() {
+            var output = '';
+            var sum = 0;
+            for(var i = 0; i < arguments.length; i++ ) {
+                output += arguments[i] + ' ';
+                sum += arguments[i];
+            }
+            output = '입력된 매개변수 ' + output + '을 더한 값은 ' + sum + "입니다."
+            return output;
+        }
+        var out = add(1,2,3,4,5,6);
+        alert(out);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

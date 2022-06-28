@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function parameter() {
+            var out = '';
+            var length = arguments.length;
+
+            if( length == 0) out += 'Zero';
+            else if ( length == 1) out += 'One';
+            else out += 'More';
+
+            return out;
+        }
+
+        var output = parameter(1,3);
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

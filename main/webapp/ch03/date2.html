@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkDate() {
+            var s = document.getElementById('pdate').value;
+            document.write("구입한 날짜 : " + s + "<br>");
+
+            var pdate = new Date(s);
+            var today = new Date();
+
+            document.write("구입타임스탬프 : " + pdate.getTime() + "밀리세컨드 <br>");
+            document.write("현재타임스탬프 : " + today.getTime() + "밀리세컨드 <br>");
+
+            var diff = today.getTime() - pdate.getTime();
+            document.write("차이시간 : " + diff + "밀리세컨드 <br>")
+            
+            var days = Math.floor(diff / (1000*60*60*24));
+            document.write("일자로 환산 : " + days + "일 <br>")
+
+            if(days > 30) {
+                alert("30일 이내에만 교환 가능합니다.");
+            } else {
+                alert("교환 가능합니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    구입날짜 :
+    <input type="date" id="pdate">
+    <button onclick="checkDate()">검사</button>
+</body>
+</html>

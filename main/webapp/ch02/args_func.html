@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function add() {
+            // 가변인자함수 : 매개변수가 함수에서 정의된 것 보다 많이 입력되었을때 작동하는 함수
+            var output="";
+            alert(typeof(arguments));
+            alert(arguments.length)
+
+            for(var i = 0; i < arguments.length; i++) {
+                output += arguments[i] + ' ';
+            }
+            return output;
+        }
+
+        var out =  add(1,2,3,4,5);
+        alert(out);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

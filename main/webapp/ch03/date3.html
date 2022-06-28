@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+
+
+    <script>
+        function setClock() {
+            var now = new Date();
+            var s = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + ":" + now.getMilliseconds();
+
+            document.getElementById("clock").innerHTML = s;
+        }
+
+        // setInterval("setClock()", 10);
+        // setTimeout("setClock()", 1000);
+    </script>
+</body>
+</html>
