@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(type) {
+            var x = Number(document.getElementById("input1").value)
+            var y = Number(document.getElementById("input2").value)
+            var c;
+
+            switch (type) {
+                case 1:
+                    c = Math.sin((x * Math.PI) / 180.0);
+                    break;
+                case 2:
+                    c = Math.cos((x * Math.PI) / 180.0);
+                    break;
+                case 3:
+                    c = Math.tan((x * Math.PI) / 180.0);
+                    break;
+                case 4:
+                    c = Math.log(x);
+                    break;
+                case 5:
+                    c = x * y;
+                    break;
+            }
+            document.getElementById("output").value = c;
+        }
+        function reset() {
+            document.getElementById("output").value = c;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    첫번째값 : <input type="text" name="" id="input1"> <br>
+    두번째값 : <input type="text" name="" id="input2"> <br>
+    결과 : <input type="text" name="" id="output"> <br>
+    <p>
+        <button id="sin" value="sin" onclick="calc(1)">sin</button>
+        <button id="cos" value="cos" onclick="calc(2)">cos</button>
+        <button id="tan" value="tan" onclick="calc(3)">tan</button>
+        <button id="log" value="log" onclick="calc(4)">log</button>
+        <button id="*" value="*" onclick="calc(5)">*</button>
+        <button id="C" value="C" onclick="reset()">c</button>
+    </p>
+
+</body>
+
+</html>
