@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        var bo = false;
-        var a = Math.sqrt(-3);
-        var c = '100';
-        console.log(a.valueOf);
-        console.log(typeof(bo));
-        console.log(Number(bo));
-        console.log(bo.toString());
-        var b = toString(a);
-        // alert(typeof(a));
-        // alert(typeof(c) + " " + Number(c));
-        document.write(a);
-        document.write(b);
-        
-    </script>
+<meta charset="UTF-8">
+<title>date4</title>
 </head>
 <body>
-    
+<div id="remaining"></div>
+<script type="text/javascript">
+function datesUntilNewYear(){
+	var now = new Date();
+	var newYear = new Date((now.getFullYear()+1), 0, 1);//2023년 1월 1일
+	var diff = newYear - now;
+	//밀리세컨드 계산
+	var milliseconds = Math.floor(diff % 1000);
+	diff = diff / 1000;
+	
+	//초계산
+	var seconds = Math.floor(diff % 60);
+	diff = diff / 60;
+	
+	//분 계산
+	var minutes = Math.floor(diff % 60);
+	diff = diff / 60;
+	
+	//시 계산
+	var hours = Math.floor(diff % 24);
+	diff = diff / 24;
+	
+	var days = Math.floor(diff);
+	
+	var outStr = "내년 신정까지 " + days + "일, " + hours + "시간, " + minutes + "분, "
+	+ seconds + "초, " + milliseconds + "밀리초 남았습니다.";
+	
+	document.getElementById("remaining").innerHTML = outStr;
+}
+
+setInterval("datesUntilNewYear()", 1000);//타이머
+
+</script>
+
+
 </body>
 </html>

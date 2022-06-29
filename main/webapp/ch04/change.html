@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ex {
+            background-color: blue;
+            font-family: "굴림체";
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ex">div 영역</div>
+    <a href="#" onclick="get()">div의 내용</a>
+    <a href="#" onclick="set('변경되었습니다.')">div 변경</a>
+    <br>
+    <img src="../images/tang1.jpg" alt="" id="image">
+    <button onclick="changeImage()">이미지 변경</button>
+    <button onclick="hide()">이미지 숨김</button>
+    <button onclick="show()">이미지 표시</button>
+    
+    <script>
+        function get() {
+            var val = document.getElementById('ex').innerHTML;
+        }
+
+        function set(v) {
+            document.getElementById('ex').innerHTML = v;
+        }
+
+        var img = document.getElementById("image");
+        function changeImage() {
+            img.src = "../images/tang2.jpg"
+        }
+
+        function hide() {
+            img.hidden;
+            img.style.visibility = 'hidden';
+            // img.style.display = "none";
+        }
+
+        function show() {
+            img.style.visibility = 'visible';
+        }
+
+        function changeStyle() {
+            var ex = document.getElementById('ex').style;
+            ex.color = "red";
+
+        }
+    </script>
+</body>
+
+</html>

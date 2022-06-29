@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mycalc</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        #qus,
+        #answer {
+            text-align: right;
+            border: 1px solid;
+            padding: 10px;
+            margin: 0px;
+            max-width: 161px;
+            height: auto;
+        }
+
+
+        #input{
+            max-width: 170px;
+            border: 1px solid;
+            padding: 3px 1px 5px 10px;
+        }
+
+        button {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <p id="qus">0</p>
+            <p id="answer">이곳은 결과창 입니다</p>
+        </section>
+        <section id="input">
+            <button id="^2">X²</button>
+            <button id="root">√</button>
+            <button id="log">log</button>
+            <button id="sin">sin</button>
+            <button id="cos">cos</button>
+            <button id="tan">tan</button>
+            <button id="x">x</button>
+            <button id="/">/</button>
+            <button id="+">+</button>
+            <button id="-">-</button>
+            <button id="(">(</button>
+            <button id=")">)</button>
+            <button id="pi">π</button>
+            <button id="c">C</button>
+            <button id="back">←</button>
+            <button id="7" onclick="addNum(7)">7</button>
+            <button id="8" onclick="addNum(8)">8</button>
+            <button id="9" onclick="addNum(9)">9</button>
+            <button id="4" onclick="addNum(4)">4</button>
+            <button id="5" onclick="addNum(5)">5</button>
+            <button id="6" onclick="addNum(6)">6</button>
+            <button id="1" onclick="addNum(1)">1</button>
+            <button id="2" onclick="addNum(2)">2</button>
+            <button id="3" onclick="addNum(3)">3</button>
+            <button id="." onclick="addDot()">.</button>
+            <button id="0" onclick="addNum(0)">0</button>
+            <button id="=">=</button>
+        </section>
+    </main>
+    
+    <script>
+        qus = document.getElementById("qus");
+        answer = document.getElementById("answer");
+
+        pow = document.getElementById("^2");
+        root = document.getElementById("root");
+        log = document.getElementById("log");
+        sin = document.getElementById("sin");
+        cos = document.getElementById("cos");
+        tan = document.getElementById("tan");
+        x = document.getElementById("x");
+        div = document.getElementById("/");
+        plu = document.getElementById("+");
+        sbt = document.getElementById("-");
+        brO = document.getElementById("(");
+        brC = document.getElementById(")");
+        pi = document.getElementById("pi");
+        c = document.getElementById("c");
+        back = document.getElementById("back");
+        // one = document.getElementById("1");
+        // two = document.getElementById("2");
+        // thr = document.getElementById("3");
+        // four = document.getElementById("4");
+        // fi = document.getElementById("5");
+        // si = document.getElementById("6");
+        // sev = document.getElementById("7");
+        // eig = document.getElementById("8");
+        // ni = document.getElementById("9");
+        // ze = document.getElementById("0");
+        dot = document.getElementById(".");
+        ans = document.getElementById("=");
+
+        function addNum(num) {
+            if(qus.textContent == 0) {
+                qus.textContent = num;
+            } else {
+                qus.textContent += num;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

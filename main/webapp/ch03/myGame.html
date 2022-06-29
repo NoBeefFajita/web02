@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myGame</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        img {
+            margin-top: -20px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        button {
+            padding: 0px 5px 10px 5px;
+            margin: 3px;
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>나를 이겨보세요</h3>
+    <img src="https://cdn.pixabay.com/photo/2016/12/07/09/42/fax-1889075__340.jpg" id="comAct">
+    <img src="" id="comBat" style="display:none;">
+    <section>
+        <button id="1">✌</button>
+        <button id="0">✊</button>
+        <button id="2">✋</button>
+    </section>
+
+
+    <script>
+        const s = document.getElementById('1');
+        const r = document.getElementById('0');
+        const p = document.getElementById('2');
+
+        s.addEventListener('click', () => {
+            let com = Math.floor(Math.random() * 3);
+            change(com);
+            battle(1, com);
+        });
+        r.addEventListener('click', () => {
+            let com = Math.floor(Math.random() * 3);
+            change(com);
+            battle(0, com);
+        });
+        p.addEventListener('click', () => {
+            let com = Math.floor(Math.random() * 3);
+            change(com);
+            battle(2, com);
+        });
+
+        function change(com) {
+            src = ["https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854__340.png",
+                "https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853__340.png",
+                "https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855__340.png"]
+            comImg = document.getElementById('comBat');
+            comImg.style.display = ""
+            comImg.src = src[com];
+        }
+
+        function battle(n, com) {
+            if (n === com) {
+                draw();
+                return;
+            }
+            else {
+                switch (n) {
+                    case 0:
+                        com == 1 ? win() : lose();
+                        break;
+                    case 1:
+                        com == 2 ? win() : lose();
+                        break;
+                    case 2:
+                        com == 0 ? win() : lose();
+                        break;
+                }
+            }
+        }
+
+        function lose() {
+            let com = Math.floor(Math.random() * 3);
+            src = ["https://cdn.pixabay.com/photo/2017/08/01/16/45/yoga-2566569__340.jpg", "https://cdn.pixabay.com/photo/2016/12/07/09/28/fax-1889012__340.jpg", "https://cdn.pixabay.com/photo/2016/11/21/22/08/white-male-1847732__340.jpg"];
+            comImg = document.getElementById('comAct');
+            comImg.src = src[com];
+        }
+
+        function win() {
+            let com = Math.floor(Math.random() * 3);
+            src = ["https://cdn.pixabay.com/photo/2016/12/01/09/10/pain-1874769__340.jpg", "https://cdn.pixabay.com/photo/2016/12/01/09/05/pray-1874744__340.jpg", "https://cdn.pixabay.com/photo/2017/02/20/08/53/drugs-2081885__340.jpg"];
+            comImg = document.getElementById('comAct');
+            comImg.src = src[com];
+        }
+
+        function draw() {
+            comImg = document.getElementById('comAct');
+            comImg.src = "https://cdn.pixabay.com/photo/2016/12/07/09/42/fax-1889075__340.jpg";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>convert</title>
+<script type="text/javascript">
+//자바스크립트는 자동으로 자료형을 변환하게 되는데 주의할 점은
+//더하기 연산일때 문자열=>숫자로 변경시 문자열이 우선되며
+//더하기를 제외한 나머지 사칙연산자는 숫자가 우선된다. 단, 빼기 연산시
+//좌우 +연결연산자의 영향을 받아 NaN처리가 되기 때문에 ()괄호안에 처리해야 계산된다.
+
+document.write("12 + 34 : " + 12+34 + "<br>");
+document.write("'12' + 34 : " + '12'+34 + "<br>");
+document.write("12 + '34' : " + 12+'34' + "<br>");
+document.write("(12 + 34) : " + (12+34) + "<br>");
+document.write("'12' / 2 : " + '12' / 2 + "<br>");
+document.write("12 % '2' : " + 12 % '2' + "<br>");
+document.write("12 * '2' : " + 12 * '2' + "<br>");
+document.write("12 - 2 : " + 12 - 2 + "<br>");
+document.write("(12 - 2) : " + (12 - 2) + "<br>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

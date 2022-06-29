@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+    <script>
+        function test() {
+            try{
+                alert("Heelo");
+            }catch(e) {
+                msg = "오류발생 " + e;
+                alert(msg);
+            }finally {
+                alert("종료");
+            }
+        }
+
+        test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

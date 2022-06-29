@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Car(model, speed, color) {
+            this.model = model;
+            this.speed = speed;
+            this.color = color;
+            this.brake = function(){this.speed -= 10;}
+            this.accel = function(){this.speed += 10;}
+        }
+
+        myCar = new Car("520d", 250, "red");
+        myCar.accel();
+        document.write(myCar.speed);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
