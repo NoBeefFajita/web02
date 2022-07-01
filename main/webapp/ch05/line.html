@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	margin: 0
+}
+</style>
+<script type="text/javascript">
+function test(){
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.setLineDash([5,2]); //점선그리기 ([선크기, 공백크기])
+	context.strokeStyle = "green"; //라인색상
+	context.beginPath(); //경로 초기화
+	context.moveTo(0, 0); //좌표설정 : 선의 시작점
+	context.lineWidth = 20; //선 두께
+	context.lineTo(100, 100); //선그리기 (선의 끝점좌표)
+	context.stroke(); //실제 여기서 선이 그려짐
+	
+}
+
+</script>
+
+
+</head>
+<body onload="test()">
+ <canvas id="myCanvas" width="300" height="200"></canvas>
+
+</body>
+</html>

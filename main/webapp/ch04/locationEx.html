@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>locationEx</title>
+</head>
+<body>
+    <h1>[1]내부 자바스크립트 호출기법</h1>
+    <!-- 하이퍼링크로 이동할 경우 -->
+    <a href="#" onclick="juso()">이동</a>   <br>
+
+    <!-- 버튼으로 이동할 경우 -->
+    <button onclick="juso()">이동</button>
+
+    <hr>
+
+    <h1>[2]인라인 자바스크립트 기법</h1>
+    <button onclick="location.href='https://google.com'"> 현재 페이지에서 </button>
+    <button onclick="location.replace('https://google.com')"> 현재 페이지에서(뒤로가기 안됨) </button>
+    <button onclick="window.open('https://google.com')"> 새창에서 </button>
+    <button onclick="window.open('https://google.com', '구글', 'width=300, height=500, location=no, status=no')"> 팝업으로 </button>
+    <button onclick="parent.location.href='https://google.com'"> 상위창에서 </button>
+    
+    <script>
+        function juso() {
+            location.href="https://google.com";
+        }
+    </script>
+</body>
+</html>

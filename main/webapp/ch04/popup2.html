@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>popup2</title>
+</head>
+<body>
+    단을 입력하세요
+    <input type="text" name="" id="dan" value="3" size="10">
+    <button onclick="winopen()">팝업창 열기</button>
+
+    <script>
+        function winopen() {
+            var dan = document.getElementById("dan").value;
+            window.open("gugu.jsp?dan=" + dan, "_blank", "width=300 height=300")
+        }
+    </script>
+</body>
+</html>

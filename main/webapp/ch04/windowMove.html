@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>windowMove</title>
+</head>
+<body>
+    <button onclick="openWindow()">윈도우 생성</button>
+    <button onclick="moveWindow()">윈도우 이동</button>
+    <button onclick="maxWindow()">전체 화면 보기</button>
+
+    <script>
+        var w;
+        function openWindow() {
+            w = window.open("","","width=300, height=400, top=50, left=50");
+            // 팝업창에 출력
+            w.document.write("<h2>팝업창 테스트</h2>");
+            w.document.write("<img src=../images/tomato.jpg>");
+            w.moveTo(100,200); // 절대좌표
+        }
+
+        function moveWindow() {
+            w.moveBy(100,100); // 상대좌표 
+        }
+
+        function maxWindow() {
+            console.log("가로 : " + screen.availWidth);
+            console.log("세로 : " + screen.availHeight);
+            w.resizeTo(screen.availWidth, screen.availHeight);
+        }
+    </script>
+</body>
+</html>
