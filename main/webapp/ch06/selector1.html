@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>selector1</title>
+</head>
+<body>
+    <h2>첫번째 h2</h2>
+    <h2>두번째 h2</h2>
+    <h2>세번째 h2</h2>
+    
+    <!-- 로컬파일방식 -->
+    <script src="../include/jquery-3.6.0.min.js"></script>
+    <!-- CDN방식 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            $("h2").click(function() {
+                $(this).hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="div1" style="border: 1px solic red; height: 300px;">
+        <h2>과일 목록</h2>
+        <ul>
+            <li>사과</li>
+            <li>포도</li>
+            <li>배</li>
+        </ul>
+    </div>
+
+    <button id="button1">append</button>
+    <button id="button2">prepend</button>
+    <button id="button3">after</button>
+    <button id="button4">before</button>
+    <button id="button5">remove</button>
+    <button id="button6">empty</button>
+
+    <script>
+        $(function() {
+            $("#button1").click(function() {
+                $("ul").append("<li>레몬</li>"); //마지막 추가
+            });
+            $("#button2").click(function() {
+                $("ul").prepend("<li>레몬</li>"); // 시작 추가
+            });
+            $("#button3").click(function() {
+                $("h2").after("<marquee>hello</marquee>"); // h2 뒤에 추가
+            });
+            $("#button4").click(function() {
+                $("h2").before("<img src='../images/tomato.jpg'>");
+            });
+            $("#button5").click(function() {
+                $("#div1").remove();  // div 제거
+            });
+            $("#button6").click(function() {
+                $("#div1").empty(); //div는 유지, 컨텐츠만 제거
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse1</title>
+    <script src="../include/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <img src="../images/i0075.jpg" alt="">
+
+    <script>
+        $(function() {
+            $("img").bind({
+                mouseout : function() {
+                    $("img").attr("src","../images/i0075.jpg");
+                },
+                mouseover : function() {
+                    $("img").attr("src","../images/i0076.jpg");
+                },
+                click : function() {
+                    $("img").attr("src","../images/i0073.jpg");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

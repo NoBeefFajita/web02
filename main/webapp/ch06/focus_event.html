@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>focus_event</title>
+    <script src="../include/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    아이디 : <input type="text" name="name"> <br>
+    패스워드 : <input type="text" name="pwd">
+
+    <script>
+        $(function () {
+            $("input").focus(function() {
+                $(this).css("background-color", "yellow");
+                $(this).css("border", "3px dotted red");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "white");
+                $(this).css("border", "1px solid black");
+            });
+        });
+    </script>
+</body>
+
+</html>

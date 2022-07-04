@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        var arrName = ["갑", "을", "병", "정"];
+        $(function() {
+            var arr=arrName.map(function (value,key) {
+                console.log("value:",value,"key:",key);
+                return value;
+            });
+            console.log(arr);
+            console.log(arrName);
+        });
+        // console.log(arrName);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse_move</title>
+    <script src="../include/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="log"></div>
+
+    <script>
+        // e:마우스 이벤트의 참조변수
+        // id가 log인 태그의 html 변경
+        // pageX pageY 마우스의 좌표
+
+        $(document).mousemove(function(e) {
+            $("#log").html("<h2 style='color:red;'>x: " + e.pageX + ", y: " + e.pageY + "</h2>");
+        });
+    </script>
+</body>
+</html>

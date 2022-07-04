@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>show_hide</title>
+   <script src="../include/jquery-3.6.0.min.js"></script>
+   <style>
+        #img1 {
+            display: none;
+            position: relative;
+        }
+        #img2 {
+            display: none;
+        }
+   </style>
+</head>
+
+<body>
+    <button id="btnShow">표시</button>
+    <button id="btnHide">숨김</button>
+    <button id="btnToggle">toggle</button>
+    <button id="btnAni">애니메이션</button>
+    <button id="btnFadein">페이드인</button>
+    <button id="btnFadeout">페이드아웃</button>
+    <button id="btnSlidedown">slide down</button>
+    <button id="btnSlideup">slide up</button>
+    <button id="btnShow">여러 효과</button>
+    <hr>
+    <img src="../images/image.png" alt="" id="img1">
+    <img src="../images/google.png" alt="" id="img2">
+
+    <script>
+        $(function() {
+            $("#btnShow").click(function() {
+                $("#img1").show("fast"); //id 가 img1인 태그를 "빠르게" 표시
+            });
+            $("#btnHide").click(function() {
+                $("#img1").hide("show"); //id 가 img1인 태그를 "빠르게" 숨김
+            });
+            $("#btnToggle").click(function() {
+                $("#img1").toggle("fast"); 
+            });
+            $("#btnAni").click(function() {
+                $("#img1").animate({
+                    left: '500px',
+                    top : '200px',
+                    opacity : '0.5'
+                }, 3000);
+            });
+            $("#btnFadein").click(function() {
+                $("#img1").fadeIn(3000, function() {
+                    $("#img2").fadeIn("slow");
+                }); 
+            });
+            $("#btnFadeout").click(function() {
+                $("#img1").fadeOut("show"); 
+            });
+            $("#btnSlidedown").click(function() {
+                $("#img1").slideDown("show");
+            });
+            $("#btnSlideup").click(function() {
+                $("#img1").slideUp("show");
+            });
+            $("#btnChain").click(function() {
+                $("#img1").show().fadeOut("slow").slideDown("slow");
+            });
+        });
+    </script>
+</body>
+</html>
