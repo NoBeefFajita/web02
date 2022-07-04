@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'LeferiPoint-SpecialItalicA';
+}
+
+
+header {
+    background-color: #000;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 18px;
+}
+
+header h1 {
+    position: relative;
+    left: 1em;
+}
+
+#user_menu #icon {
+    text-align: right;
+}
+
+header #icon button {
+    background-color: #000;
+    margin-right: 5px;
+}
+
+#user_menu #drop {
+    width: 80px;
+}
+
+#layer {
+    list-style-type: none;
+    background-color: white;
+    border-radius: 20px;
+    color: #000;
+    padding: 10px 3px 10px 5px;
+    position: absolute;
+    /* display: none; */
+}
+
+#user_menu ul li {
+    margin: 4px;
+}
+
+#user_menu button {
+    padding: 2px 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#user_menu button:hover {
+    transition: 0.35s;
+    text-shadow: 0 1px 0 #fff, 0 1px 0 #2e2e2e, 0 1px 0 #2c2c2c, 0 1px 0 #2a2a2a, 0 1px 0 #282828, 0 1px 0 #262626;
+}
+
+
+nav {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 6px;
+    background-color: rgb(206, 197, 121);
+    border-bottom: 1px solid rgb(124, 126, 22);
+
+}
+
+main {
+    background-color: rgb(31, 2, 2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main img {
+    padding: 20px;
+    flex-basis: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(233, 219, 201);
+}
+
+footer select,
+option,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer span {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+select {
+    box-sizing: border-box;
+    width: 150px;
+    margin: 20px 10px;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+option {
+    font-size: 14px;
+    color: #fff;
+    background: #272822;
+}
+
+footer button {
+    padding: 4px;
+    border-radius: 20%;
+    border-color: white;
+}

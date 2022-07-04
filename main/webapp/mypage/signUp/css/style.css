@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'LeferiPoint-SpecialItalicA';
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 500px;
+    margin: 80px 20px;
+    padding: 20px 30px;
+    background-color: white;
+}
+
+article {
+    padding: 10px;
+    background-color: rgb(231, 204, 171);
+}
+
+h1 {
+    text-align: center;
+}
+
+dl {
+    display: flex;
+    margin-top: 30px;
+}
+
+dd {
+    margin-left: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: #000 solid;
+}
+
+div {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    text-align: center;
+    padding: 5px 10px 2px 10px;
+}

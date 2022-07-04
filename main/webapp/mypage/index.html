@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mypage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div></div>
+        <h1>Satisfying Food</h1>
+        <div id="user_menu">
+            <p id="icon">
+                <button id="iconBtn">
+                    <img src="https://blog.kakaocdn.net/dn/wN5pU/btrGq1KeqVw/9ZzHlukPOqMKTAK1H5XXk0/img.png" width="25" alt="user">
+                </button>
+            </p>
+            <p id="drop">
+                <ul id="layer">
+                    <li>
+                        <button id="signIn">sign in</button>
+                    </li>
+                    <li>
+                        <button id="signUp">sign up</button>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </header>
+    <nav>
+        <a href="#image">Image</a>
+        <a href="#recipe">Recipe</a>
+    </nav>
+    <main>
+        <video autoplay loop class="video" id="pasta" muted>
+            <source
+                src="https://player.vimeo.com/external/446097562.sd.mp4?s=6af0ccf5d4fe2e30dc055508dca1460c9652a81e&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+        <video autoplay loop class="video" id="steak" muted>
+            <source
+                src="https://player.vimeo.com/external/540319023.sd.mp4?s=b150bb85a968d79bc66e5551e29f39f5ad2fdabe&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+        <video autoplay loop class="video" id="egg" muted>
+            <source
+                src="https://player.vimeo.com/external/317452989.sd.mp4?s=8246326ee4b4108898f00d868ddfd1fa57d85a77&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+        <video autoplay loop class="video" id="croissant" muted>
+            <source
+                src="https://player.vimeo.com/external/355357902.sd.mp4?s=7f8893a5bd3317484d203b2e6ac1aabd974915aa&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+        <video autoplay loop class="video" id="samgyeobsal" muted>
+            <source
+                src="https://player.vimeo.com/external/271611326.sd.mp4?s=3c5d20003a97a14d38832283944cc78da3d60082&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+        <video autoplay loop class="video" id="salad" muted>
+            <source
+                src="https://player.vimeo.com/external/371826781.sd.mp4?s=c2799e1a62ef1e4870256df32890c3b49caa0d90&profile_id=165&oauth2_token_id=57447761"
+                type="video/mp4">
+            브라우저에서 비디오 파일을 지원하지 않습니다. <br>
+        </video>
+    </main>
+    <section id="image">
+        <h2>*Images</h2>
+        <form action="images/index.jsp" method="post">
+            <button name="food" value="meat">Meat</button>
+            <hr>
+            <button name="food" value="fish">Fish</button>
+            <hr>
+            <button name="food" value="vegetable">Vegetable</button>
+            <hr>
+            <button name="food" value="bread">Bread</button>
+            <hr>
+            <button name="food" value="fruit">Fruit</button>
+            <hr>
+        </form>
+    </section>
+    <br>
+    <br>
+    <section id="recipe">
+        <h2>*Recipes</h2>
+        <form action="recipes/index.jsp" method="post">
+            <button name="food" value="pasta">Pasta</button>
+            <hr>
+            <button name="food" value="steak">steak</button>
+            <hr>
+            <button name="food" value="friedEgg">Fried Egg</button>
+            <hr>
+            <button name="food" value="croissant">Croissant</button>
+            <hr>
+            <button name="food" value="samgyeobsal">Samgyeobsal</button>
+            <hr>
+            <button name="food" value="salad">Salad</button>
+            <hr>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'LeferiPoint-SpecialItalicA';
+}
+
+header {
+    background-color: #000;
+    padding: 8px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 6px;
+    background-color: rgb(206, 197, 121);
+    border-bottom: 1px solid rgb(124, 126, 22);
+}
+
+.video {
+    width: 100%;
+    left: 50%;
+    background-color: #000;
+    vertical-align: bottom
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#cook,
+#comments {
+    background-color: rgb(235, 235, 235);
+    padding: 10px 0px;
+}
+
+#cook h2 {
+    margin: 20px 20px 0px;
+    padding: 20px 0px;
+}
+
+article {
+    margin: 20px 20px;
+    padding: 20px 30px;
+    background-color: white;
+}
+
+.ingredients table {
+    width: 100%;
+    max-width: 700px;
+    min-width: 400px;
+    margin-top: 20px;
+}
+
+.ingredients table td {
+    padding: 7px;
+}
+
+.ingredients .quantity {
+    text-align: right;
+}
+
+.steps ul {
+    margin: 20px;
+    list-style-type: a;
+}
+
+.steps li {
+    margin: 30px 5px;
+    line-height: 2em;
+    word-spacing: 1.5px;
+    letter-spacing: 0.4px;
+}
+
+
+
+/* comment */
+#wirteComment {
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+#comments article #wirteComment_p {
+    text-align: center;
+}
+
+#comments article #cu_p {
+    width: 60px;
+    text-align: right;
+    
+}
+
+#comments button {
+    margin-left: 3px;
+    padding: 7px 10px 5px 10px;
+    background-color: rgb(188, 236, 239);
+    border: 1px;
+    border-radius: 15px;
+}
+
+#comments table {
+    width: 85%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+}
+
+.date {
+    color: #aaa;
+    font-size:8px;
+}
+
+.cmt {
+    font-size: 14px;
+}
+
+
+/* footer */
+footer {
+    background-color: rgb(233, 219, 201);
+}
+
+footer select,
+option,
+footer button,
+.date {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer span {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+select {
+    box-sizing: border-box;
+    width: 150px;
+    margin: 20px 10px;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+option {
+    font-size: 14px;
+    color: #fff;
+    background: #272822;
+}
+
+footer button {
+    padding: 4px;
+    border-radius: 20%;
+    border-color: white;
+}
