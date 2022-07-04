@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section id="comments">
+            <article>
+                <h3>⁕남기기</h3>
+                <table>
+                    <thead>
+                        <tr id="wirteComment_p">
+                            <td>
+                                <input type="text" id="wirteComment" placeholder="  레시피에 대한 한줄 평을 남겨보세요!" onkeyup="enter()">
+                            </td>
+                            <td id="cu_p">
+                                <button id="cu">작성</button>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="ctb">
+                        <tr><td colspan="2"><br><br></td></tr>
+                        <tr id="noComment"></tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <form action="index.jsp" name="form1">
+            <span>Food:</span>
+            <select name="food" id="">
+                <option value="">-------</option>
+                <option value="pasta">pasta</option>
+                <option value="steak">steak</option>
+                <option value="friedEgg">fried egg</option>
+                <option value="croissant">croissant</option>
+                <option value="samgyeobsal">samgyeobsal</option>
+                <option value="salad">salad</option>
+            </select>
+            <button>go</button>
+        </form>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

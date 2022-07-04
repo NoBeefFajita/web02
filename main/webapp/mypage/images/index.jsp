@@ -123,6 +123,9 @@
 		<a href="../index.html">Home</a> <a href="../recipes/index.jsp">Recipe</a>
 	</nav>
 	<main>
+        <section id="bigImg">
+            <img src="<%= src[0] %>" width="75%">
+        </section>
 		<%
         for(String source : src) {
             out.print("<img src=\"" + source + "\" height=\"230\">");
@@ -144,6 +147,7 @@
         </form>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

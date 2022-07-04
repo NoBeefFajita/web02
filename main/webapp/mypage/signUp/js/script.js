@@ -1,14 +1,13 @@
 'use strict';
 
-
 const id = document.getElementById('id');
 const pw = document.getElementById('pw');
 const pwc = document.getElementById('pwc');
 const myname = document.getElementById('name');
 const email = document.getElementById('email');
 const tel = document.getElementById('tel');
-
-const submit = document.getElementById('submit');
+const form1 = document.getElementById('form1');
+const submitBtn = document.getElementById('submitBtn');
 
 function isId(asValue) {
 	var regExp = /^[a-z]+[a-z0-9]{5,19}$/g;
@@ -38,7 +37,7 @@ function isPhoneNumber(asValue) {
 
 // 비밀번호 일치 확인
 pwc.addEventListener('change',()=>{
-    if(!(pwc.value == pw.value)) {
+    if(pwc.value != pw.value) {
         pw.style.border = "2px solid #ff4444";
         pw.style.borderBottom = "#000 solid";
         pwc.style.border = "2px solid #ff4444";
@@ -51,7 +50,7 @@ pwc.addEventListener('change',()=>{
     }
 });
 pw.addEventListener('change',()=>{
-    if(!(pwc.value == pw.value) && !pwc.value == '') {
+    if(pwc.value != pw.value && !pwc.value == '') {
         pw.style.border = "2px solid #ff4444";
         pw.style.borderBottom = "#000 solid";
         pwc.style.border = "2px solid #ff4444";
@@ -66,7 +65,7 @@ pw.addEventListener('change',()=>{
 
 
 // 형식 확인
-submit.addEventListener('click', ()=>{
+submitBtn.addEventListener('click', ()=>{
     if(!isId(id.value)) {
         alert("아이디는 영문자로 시작하는 영문자 또는 숫자 6~20자");
         id.value="";
@@ -97,4 +96,10 @@ submit.addEventListener('click', ()=>{
         tel.focus();
         return;
     }
+    if(pwc.value != pw.value) {
+        alert("비밀번호 불일치");
+        return;
+    }
+    alert("가입되셨습니다. 환영합니다 " + myname.value + "님!");
+    form1.submit();
 });
