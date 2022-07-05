@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <header data-role="header">
+
+            <h1>스마트 페이지 링크 처리</h1>
+        </header>
+        <main data-role="content">
+            <h2>외부 프로그램 링크</h2>
+            <!-- data-inset="true"는 ul / ol에 적용하게 되는데 리스트뷰의 모서리를 둥글게 처리함 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="mailto:gd@gmail.com">이메일 링크</a></li>
+                <li><a href="tel:0311234567" target="_blank">전화번호 링크</a></li>
+                <li><a href="sms:01012345678">SMS문자 링크</a></li>
+                <li><a
+                        href="https://www.google.co.kr/maps/place/KH%EC%A0%95%EB%B3%B4%EA%B5%90%EC%9C%A1%EC%9B%90/data=!4m5!3m4!1s0x357c9ec255555555:0x3565475c3365c5bb!8m2!3d37.498993!4d127.032909?hl=ko">위성좌표
+                        링크</a></li>
+            </ul>
+        </main>
+        <footer data-role="footer" data-position="fixed">
+            <a href="index.html" data-icon="grid" rel="external">Index</a>
+        </footer>
+    </div>
+</body>
+
+</html>

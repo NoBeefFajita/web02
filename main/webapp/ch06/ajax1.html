@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>동기식(single thread) : 실행시 깜빡이는 현상</h2>
+    <form action="result.jsp">
+        단을 입력하세요 <input type="text" name="dan">
+        <button>확인</button>
+    </form>
+
+    <h2>비동기식(multi thread) : 실행시 안깜빡임</h2>
+    단을 입력하세요 <input type="text" name="" id="dan">
+    <button id="button1">확인</button>
+
+    <div id="result">결과 출력 영역</div>
+
+    <script>
+        $(function () {
+            $("#button1").click(function () {
+                var dan = $("#dan").val();
+                // 비동기적 방식으로 server 호출
+                $.ajax({
+                    type: "post",
+                    url: "result.jsp",
+                    data: "dan=" + dan, // queryString방식
+                    success: function (data) { // 콜백함수 (처리완료시 실행됨)
+                        $('body').html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

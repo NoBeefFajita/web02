@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dragEx</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <style>
+        #div1 {
+            position: absolute;
+            left: 300PX;
+            width: 300PX;
+            top: 50PX;
+            height: 300px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>이미지 드래그</h2>
+    <img src="../images/tomato.jpg" alt="" id="img1">
+    <div id="div1">이미지를 여기로 드래그하세요.</div>
+
+    <script>
+        $(function() {
+            $("#img1").draggable({
+                opacity: "0.3"
+            });
+
+            $("#div1").droppable({
+                accept: "#img1",
+                drop: function(){
+                    $(this).text("이미지가 드래그되었습니다.")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js)guess</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>숫자 맞추기 게임</h2>
+    <form>
+        숫자(1~10)
+        <input type="text" id="user" size="5">
+        <button type="button" onclick="guess()">확인</button> 
+        추측횟수 : 
+        <input type="text" name="" id="guess" size="5">
+        힌트 :
+        <input type="text" name="" id="result" size="16">
+        정답 :
+        <input type="text" name="guesses" id="" size="5">
+    </form>
+
+    <script>
+        var nGuesses = 0;
+        var computerNumber = 0;
+
+        $(function() {
+            computerNumber = Math.floor(Math.random() * 10 + 1);
+            $("#computerNumber").val(computerNumber);
+        });
+
+        function guess() {
+            var result = "";
+            var number = parseInt($("#user").val());
+            nGUesses++;
+            if(number == computerNumber) result = "성공입니다.";
+            else if( number < computerNumber) result = "낮습니다.";
+            else result = "높습니다.";
+
+            $("#result").val(result);
+            $("#guesses").val(nGuesses);
+            return true; // 계속 진행하려면 true 
+        }
+    </script>
+</body>
+</html>

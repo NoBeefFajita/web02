@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page">
+        <header data-role="header">
+            <h1>My Title</h1>
+        </header>
+        <main data-role="content">
+            <form>
+                <label for="slider-0">슬라이더 :</label>
+                <input type="range" name="slider" id="slider-0" value="25" min="0" max="100">
+                <!-- content 영역에서 버튼 만들때는 data-role="button" 처리 -->
+                <a href="#" data-role="button" data-icon="star">버튼1</a>
+                <a href="#" data-role="button" data-icon="home">버튼2</a>
+                <a href="#" data-role="button" data-icon="search">버튼3</a>
+                <a href="#" data-role="button" data-icon="shop">버튼4</a>
+                <a href="#" data-role="button" data-icon="user">버튼5</a>
+                <div href="#" data-role="button" data-icon="star">버튼6</div>
+
+            </form>
+        </main>
+        <footer data-role="footer">
+            <h4>Thank you</h4>
+        </footer>
+</body>
+</html>

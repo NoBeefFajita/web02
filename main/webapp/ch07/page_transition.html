@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <header data-role="header">
+            <h1>첫번째 페이지</h1>
+        </header>
+        <main data-role="content">
+            <a href="#page2">페이지2</a>
+        </main>
+        <footer data-role="footer">
+            <h4>내부링크방식</h4>
+        </footer>
+    </div>
+    <div data-role="page" id="page2">
+        <header data-role="header">
+            <h1>두번째 페이지</h1>
+        </header>
+        <main data-role="content">
+            <p>페이지 전환 애니메이션 효과</p><br>
+            <a href="#page1" data-direction="reverse">페이지1</a><br>
+            <a href="#page3">페이지3 기본 전환효과 적용</a><br>
+            <a href="#page3" data-transition="slide">페이지3 slide 적용</a><br>
+            <a href="#page3" data-transition="slideup">페이지3 slideup 적용</a><br>
+            <a href="#page3" data-transition="slidedown">페이지3 slidedown 적용</a><br>
+            <a href="#page3" data-transition="flip">페이지3 flip 적용</a><br>
+            <a href="#page3" data-transition="fade">페이지3 fade 적용</a><br>
+            <a href="#page3" data-transition="pop">페이지3 pop 적용</a><br>
+            <a href="#page3" data-transition="none">페이지3 none 적용</a><br>
+        </main>
+        <footer data-role="footer">
+            <h4>내부링크방식</h4>
+        </footer>
+    </div>
+    <div data-role="page" id="page3">
+        <header data-role="header">
+            <h1>세번째 페이지</h1>
+        </header>
+        <main data-role="content">
+            <a href="#page1">페이지1</a>
+            <a href="#page2" data-rel="back">페이지2</a>
+            <!-- data-rel="back", data-direction="reverse" 차이점
+            data-rel="back" 속성은 웹브라우저의 뒤로가기 기능과 일치하게 동작, 이전페이지의 상태를 그대로복구
+            data-direction="reverse" 속성은 이전페이지 상태를 복원하지 않고 다순히 이전페이지로만 이동함
+             -->
+        </main>
+        <footer data-role="footer">
+            <h4>내부링크방식</h4>
+        </footer>
+    </div>
+</body>
+
+</html>

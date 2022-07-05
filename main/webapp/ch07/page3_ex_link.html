@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page3</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="page3">
+        <header data-role="header">
+            <h1>세번째 페이지</h1>
+        </header>
+        <main data-role="content">
+            <!-- 외부페이지/내부링크방식 -->
+            <a href="page1_ex_link.html">페이지1</a>
+
+             <!-- 외부페이지/외부링크방식 : target="_blank" 속성은 새창으로 웹페이지를 띄우는데, 이때 Ajax를
+                  사용하지 않고 페이지를 연다. -->
+            <a href="https://m.naver.com/index/html" target="_blank">네이버 페이지</a>
+        </main>
+        <footer data-role="footer">
+            <h4>Footer영역</h4>
+        </footer>
+</body>
+</html>
