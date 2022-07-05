@@ -20,6 +20,12 @@
 
     <div id="result">결과 출력 영역</div>
 
+    <h2>비동기식(multi thread) : 실행시 안깜빡임-Vanilla js</h2>
+    단을 입력하세요 <input type="text" name="" id="dan2">
+    <button id="button2">확인</button>
+
+    
+
     <script>
         $(function () {
             $("#button1").click(function () {
@@ -35,6 +41,22 @@
                 });
             });
         });
+
+        const formData = new FormData();
+        var dan = document.getElementById("dan2");
+        formData.append('dan', dan);
+        fetch("result.jsp", {
+            method: "post",
+            body: {
+                "dan": dan
+            }
+        })
+            .then(response => response.text())
+            .then(data => document.body.innerHTML = data)
+            .catch(e => console.log(e));
+
+
+
     </script>
 </body>
 

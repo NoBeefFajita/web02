@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fetch</title>
+</head>
+
+<body>
+    <button>출력</button>
+    <div id="result2">결과 출력 영역</div>
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.addEventListener('click', print);
+
+        function print() {
+            fetch("student.json")
+                .then(response => response.json())
+                .then(data => {
+                    result = document.getElementById("result2");
+                    result.textContent = '';
+                    data.forEach(el => {
+                        result.innerHTML += "num: " + el.num + "<br>"
+                                          + "name: " + el.name + "<br>"
+                                          + "tel: " + el.tel + "<br><br>";
+                    });
+                }).catch(error => {
+                    console.log("실패");
+                });
+        }
+
+        // const config = {
+        //   method: "get"
+        // };
+        // function print() {
+        //     fetch("https://jsonplaceholder.typicode.com/users/1", config)
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             console.log(data);
+        //         }).catch(error => {
+        //             console.log("실패");
+        //         });
+        // }
+
+    </script>
+</body>
+
+</html>
