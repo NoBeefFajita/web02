@@ -14,11 +14,11 @@
         <input type="text" id="user" size="5">
         <button type="button" onclick="guess()">확인</button> 
         추측횟수 : 
-        <input type="text" name="" id="guess" size="5">
+        <input type="text" name="" id="guesses" size="5">
         힌트 :
         <input type="text" name="" id="result" size="16">
         정답 :
-        <input type="text" name="guesses" id="" size="5">
+        <input type="text" name="computerNumber" id="" size="5">
     </form>
 
     <script>
@@ -27,13 +27,13 @@
 
         $(function() {
             computerNumber = Math.floor(Math.random() * 10 + 1);
-            $("#computerNumber").val(computerNumber);
+            // $("#computerNumber").val(computerNumber);
         });
 
         function guess() {
             var result = "";
             var number = parseInt($("#user").val());
-            nGUesses++;
+            nGuesses++;
             if(number == computerNumber) result = "성공입니다.";
             else if( number < computerNumber) result = "낮습니다.";
             else result = "높습니다.";
