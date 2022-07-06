@@ -21,6 +21,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 18px;
+    position:fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 header h1 {
@@ -75,9 +78,15 @@ nav {
     padding-top: 6px;
     background-color: rgb(206, 197, 121);
     border-bottom: 1px solid rgb(124, 126, 22);
+    position: fixed;
+    width: 100%;
+    top: 62px;
+    z-index: 1;
 }
 
 main {
+    position: relative;
+    top: 95px;
     pointer-events: none;
 }
 
@@ -114,4 +123,9 @@ form > button {
     border: white;
     background-color: white;
     cursor: pointer;
+}
+
+footer {
+    position: relative;
+    top: 95px;
 }

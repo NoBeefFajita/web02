@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Recipe</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="recipes/css/style.css">
 </head>
 
 <body>
@@ -143,31 +143,9 @@
 		steps = step;
 	}
 	%>
-
-
-	<header>
-		<div></div>
-		<h1>Recipe - <%=food%></h1>
-		<div id="user_menu">
-            <p id="icon">
-                <button id="iconBtn">
-                    <img src="https://blog.kakaocdn.net/dn/wN5pU/btrGq1KeqVw/9ZzHlukPOqMKTAK1H5XXk0/img.png" width="25" alt="user">
-                </button>
-            </p>
-            <p id="drop">
-                <ul id="layer">
-                    <li>
-                        <button id="signIn">sign in</button>
-                    </li>
-                    <li>
-                        <button id="signUp">sign up</button>
-                    </li>
-                </ul>
-            </p>
-        </div>
-	</header>
 	<nav>
-		<a href="../index.html">Home</a> <a href="../images/index.jsp">Image</a>
+		<a href="../index.html">Home</a>
+		<a href="../images/index.jsp">Image</a>
 	</nav>
 	<main>
 		<video autoplay loop class="video" id="<%=food%>" muted>
@@ -239,7 +217,6 @@
             <button>go</button>
         </form>
     </footer>
-	<script src="js/script.js"></script>
 </body>
 
 </html>

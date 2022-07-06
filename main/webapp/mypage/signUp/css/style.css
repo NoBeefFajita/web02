@@ -20,7 +20,9 @@ body {
 }
 
 section {
-    width: 500px;
+    position:relative;
+    width: 400px;
+    top: 20%;
     margin: 80px 20px;
     padding: 20px 30px;
     background-color: white;

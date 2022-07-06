@@ -39,15 +39,3 @@ $(function() {
     });
 });
 
-$(function() {
-	 //배너의 현재 좌표값 저장(top의 좌표)
-	var currentPosition = parseInt($("#bigImg").css("top"));
-	//스크롤 이벤트가 발생하면
-	$(window).scroll(function() {
-		//스크롤바의 좌표 저장
-		var position = $(window).scrollTop();
-		$("#bigImg").stop().animate({
-			"top" : position + currentPosition + "px"
-		}, 10);
-	});
-});
