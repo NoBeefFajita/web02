@@ -7,6 +7,13 @@
 <title>result</title>
 </head>
 <body>
+<h1>Test</h1>
+<%-- <%
+String inPara = request.getParameter("dan");
+
+out.print(inPara);
+
+%> --%>
 	<%
 	int dan = Integer.parseInt(request.getParameter("dan"));
 	for (int i = 1; i <= 9; i++) {

@@ -24,7 +24,7 @@
     단을 입력하세요 <input type="text" name="" id="dan2">
     <button id="button2">확인</button>
 
-    
+
 
     <script>
         $(function () {
@@ -42,21 +42,20 @@
             });
         });
 
-        const formData = new FormData();
-        var dan = document.getElementById("dan2");
-        formData.append('dan', dan);
-        fetch("result.jsp", {
-            method: "post",
-            body: {
-                "dan": dan
-            }
-        })
-            .then(response => response.text())
-            .then(data => document.body.innerHTML = data)
-            .catch(e => console.log(e));
+        const btn2 = document.getElementById("button2");
+        btn2.addEventListener('click', print);
 
-
-
+        function print() {
+            var dan = document.getElementById("dan2");
+            fetch("result.jsp", {
+                method: "post",
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: "dan=" + dan.value
+            })
+                .then(response => response.text())
+                .then(data => document.body.innerHTML = data)
+                .catch(e => console.log(e));
+        }
     </script>
 </body>
 
